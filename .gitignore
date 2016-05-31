@@ -1,0 +1,10 @@
+/webapp/WEB-INF/classes
+/mossle.store
+/target/
+/.settings/
+/work/
+/bin/
+/.classpath
+/.project
+
+/target/
