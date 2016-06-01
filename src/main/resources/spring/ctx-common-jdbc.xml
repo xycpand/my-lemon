@@ -23,19 +23,21 @@
 	</bean>
 
 	<!-- 自动初始化数据库 -->
-	<bean id="databaseMigrator" class="com.mossle.core.dbmigrate.DatabaseMigrator" depends-on="hsqldbServer">
+	<bean id="databaseMigrator" class="com.mossle.core.dbmigrate.DatabaseMigrator">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="enabled" value="${dbmigrate.enabled}"/>
 		<property name="clean" value="${dbmigrate.clean}"/>
 	</bean>
 
 	<!-- 测试用的hsqldb数据库 -->
-	<bean id="hsqldbServer" class="com.mossle.simulator.hsqldb.HsqldbServer">
+<!-- 	<bean id="hsqldbServer" class="com.mossle.simulator.hsqldb.HsqldbServer">
 		<property name="enabled" value="${hsqldb.enabled}"/>
 		<property name="username" value="${hsqldb.username}"/>
 		<property name="password" value="${hsqldb.password}"/>
 		<property name="port" value="${hsqldb.port}"/>
 		<property name="path" value="${hsqldb.path}"/>
 		<property name="databaseName" value="${hsqldb.databaseName}"/>
-	</bean>
+	</bean> -->
+	
+	
 </beans>
